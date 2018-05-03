@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Assignment: HTML Table</title>
+    <style>
+
+      body {
+        width: 970px;
+      }
+
+      .header, .container {
+        display: flex;
+        justify-content: center;
+      }
+
+      .row {
+        max-width: 700px;
+      }
+
+      table {
+        border-collapse: collapse;
+      }
+
+      th, td {
+        border: 2px solid lightblue;
+      }
+
+
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="header">
+        <h1>Assignment: HTML Table</h1>
+      </div>
+      <div class="container">
+        <div class="row">
+          <table>
+            <tr>
+              <th>User #</th>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Full Name</th>
+              <th>Full Name in UPPER</th>
+              <th>Length of Full Name</th>
+            </tr>
+
+            {% for i in range(0,(users.__len__())): %}
+            <tr>
+              <th>{{ i + 1 }}</th>
+              <td>{{ users[i]['first_name'] }}</td>
+              <td>{{ users[i]['last_name'] }}</td>
+              <td>{{ (users[i]['first_name'] + ' ' + users[i]['last_name']) }}</td>
+              <td>{{ (users[i]['first_name'] + ' ' + users[i]['last_name']).upper() }}</td>
+              <td>{{ ((users[i]['first_name'] + users[i]['last_name']).__len__()) }}</td>
+            </tr>
+            {% endfor %}
+          </table>
+
+        </div>
+      </div>
+
+    </div>
+  </body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Assignment: Checkboard</title>
+    <style>
+
+      body {
+        width: 970px;
+      }
+
+      .header, .container {
+        display: flex;
+        justify-content: center;
+      }
+
+      .row {
+        max-width: 700px;
+      }
+
+      td {
+        height: 50px;
+        width: 50px;
+      }
+
+      .even {
+        background-color: red;
+      }
+
+      .odd {
+        background-color: grey;
+      }
+
+
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="header">
+        <h1>Assignment: Checkerboard</h1>
+      </div>
+      <div class="container">
+        <div class="row">
+          <table>
+          {% for i in range(0, rowNum):  %}
+            <tr>
+            {% for j in range(0, colNum): %}
+              {% if j%2-i%2==0: %}
+              <td class="even"></td>
+              {% else: %}
+              <td class="odd"></td>
+              {% endif %}
+            {% endfor %}
+            </tr>
+
+          {% endfor %}
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </body>
+</html>
