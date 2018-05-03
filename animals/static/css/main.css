@@ -1,0 +1,29 @@
+
+* {
+  margin: 0px auto;
+  padding: 0px;
+}
+
+.wrapper {
+
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  background-color: lightgrey;
+}
+
+.container {
+
+}
+
+.row {
+  display: flex;
+  justify-content: space-around;
+}
+
+img {
+  height: 120px;
+  width: 120px;
+}

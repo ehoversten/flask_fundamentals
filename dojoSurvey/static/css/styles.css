@@ -40,6 +40,12 @@ button {
   padding: 10px;
 }
 
+a {
+  height: 30px;
+  width: 100px;
+  padding: 10px;
+}
+
 /* .form {
   max-width: 750px;
   border: 2px solid lightblue;

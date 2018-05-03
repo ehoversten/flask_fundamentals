@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Assignment: Dojo Survey</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename="css/styles.css") }}">
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="header">
+        <h1>Results of Form Submit</h1>
+      </div>
+      <div class="container">
+        <div class="content">
+          <h3>Name: {{ name }}</h3>
+          <h3>Location: {{ location }}</h3>
+          <h3>Favorite Language: {{ fav }}</h3>
+          <h3>Comments: {{ comments }}</h3>
+          <a href="/"><button>Go Back</button></a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

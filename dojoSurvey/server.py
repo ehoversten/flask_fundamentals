@@ -27,12 +27,13 @@ def result():
     print('Recieved Post info from form')
     print(request.form)
     # to access the data that the user input into the fields we use request.form['name_of_input']
+    newData = request.form
     name = request.form['name']
     location = request.form['location']
     fav = request.form['fav']
     comments = request.form['comments']
      # redirects back to the '/' route
-    return redirect('result.html')
+    return render_template('result.html', name=name, location=location, fav=fav, comments=comments)
 
 
 
