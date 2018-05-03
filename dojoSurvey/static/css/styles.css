@@ -1,0 +1,46 @@
+
+* {
+  margin: 0px auto;
+  padding: 0;
+}
+
+.wrapper {
+  /* margin: 20px; */
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  background-color: lightgrey;
+}
+
+/* .container {
+  width: 100%;
+  max-width: 500px;
+} */
+
+.row {
+  width: 100%;
+  max-width: 750px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* textarea {
+  height: 200px;
+} */
+
+button {
+  height: 30px;
+  width: 100px;
+  padding: 10px;
+}
+
+/* .form {
+  max-width: 750px;
+  border: 2px solid lightblue;
+} */
