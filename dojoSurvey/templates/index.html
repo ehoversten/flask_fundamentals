@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>Assignment: Dojo Survey</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename="css/styles.css") }}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/survey_styles.css') }}">
   </head>
   <body>
     <div class="wrapper">
@@ -13,25 +14,36 @@
       <div class="container">
         <div class="row">
           <form class="form" action="/result" method="post">
-            Your Name:
-            <input type="text" name="name" value="">
-            Dojo Location:
-              <select name="location">
-                <option value="dc" selected>Washington - DC</option>
-                <option value="chicago">Chicago</option>
-                <option value="seattle">Seattle</option>
-                <option value="austin">Austin</option>
-              </select>
-            Favorite Language:
-              <select name="fav">
-                <option value="dc" selected>Python </option>
-                <option value="seattle">JavaScript</option>
-                <option value="ios" selected>iOS</option>
-                <option value="htmlcss">HTML / CSS</option>
-              </select>
-            Comment (optional):
-            <input type="textarea" name="comments" value="">
-            <button type="submit" name="submit">Submit</button>
+            <div class="form-group row">
+              Your Name:
+              <input class="form-control" type="text" name="name" value="">
+            </div>
+            <div class="form-group row">
+              Dojo Location:
+                <select class="custom-select" name="location">
+                  <option value="dc" selected>Washington - DC</option>
+                  <option value="chicago">Chicago</option>
+                  <option value="seattle">Seattle</option>
+                  <option value="austin">Austin</option>
+                </select>
+            </div>
+            <div class="form-group row">
+              Favorite Language:
+                <select class="custom-select" name="fav">
+                  <option value="dc" selected>Python </option>
+                  <option value="seattle">JavaScript</option>
+                  <option value="ios" selected>iOS</option>
+                  <option value="htmlcss">HTML / CSS</option>
+                </select>
+            </div>
+              <div class="form-group row">
+                Comment (optional):
+                <input class="form-control" type="textarea" name="comments" value="">
+              </div>
+              <div class="form-group row">
+                <button type="button" class="btn btn-warning"  name="submit">Submit</button>
+              </div>
+            </div>
           </form>
         </div>
       </div>

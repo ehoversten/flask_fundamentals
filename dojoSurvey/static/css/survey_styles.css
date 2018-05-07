@@ -5,37 +5,34 @@
 }
 
 .wrapper {
-  /* margin: 20px; */
+  /* display: flex; */
 }
 
 .header {
+  height: 80px;
   display: flex;
   justify-content: center;
   background-color: lightgrey;
+  margin-bottom: 30px;
 }
 
-/* .container {
-  width: 100%;
-  max-width: 500px;
-} */
 
 .row {
   width: 100%;
   max-width: 750px;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  background-color: dodgerblue;
 }
 
 input, textarea {
-  width: 100%;
+  width: 50%;
   padding: 10px;
   box-sizing: border-box;
 }
 
-/* textarea {
-  height: 200px;
-} */
-
 button {
-  height: 30px;
   width: 100px;
   padding: 10px;
 }
@@ -45,8 +42,3 @@ a {
   width: 100px;
   padding: 10px;
 }
-
-/* .form {
-  max-width: 750px;
-  border: 2px solid lightblue;
-} */
