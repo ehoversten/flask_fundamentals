@@ -12,41 +12,58 @@
         <h1>Assignment: Dojo Survey</h1>
       </div>
       <div class="container">
+        <div class="messages">
+          <!-- form validation code  -->
+          {% with messages = get_flashed_messages() %}
+            <!-- if any 'messages' exist, then ... -->
+            {% if messages %}
+              <!-- loop through the messages in the message dictionary -->
+              <ul>
+               {% for message in messages %}
+               <li>{{ message }}</li>
+               {% endfor %}
+              </ul>
+            {% endif %}
+          {% endwith %}
+        </div>
         <div class="row">
-          <form class="form" action="/result" method="post">
+          <form class="form" action="/process" method="post">
             <div class="form-group row">
-              Your Name:
-              <input class="form-control" type="text" name="name" value="">
+              <h5>Your Name:</h5>
+              <input class="form-control" type="text" name="name" value="{{ session['name'] }}">
             </div>
             <div class="form-group row">
-              Dojo Location:
+              <h5>Dojo Location:</h5>
                 <select class="custom-select" name="location">
-                  <option value="dc" selected>Washington - DC</option>
+                  <option value="dc">Washington - DC</option>
                   <option value="chicago">Chicago</option>
                   <option value="seattle">Seattle</option>
                   <option value="austin">Austin</option>
                 </select>
             </div>
             <div class="form-group row">
-              Favorite Language:
+              <h5>Favorite Language:</h5>
                 <select class="custom-select" name="fav">
-                  <option value="dc" selected>Python </option>
-                  <option value="seattle">JavaScript</option>
-                  <option value="ios" selected>iOS</option>
+                  <option value="python">Python</option>
+                  <option value="JavaScript">JavaScript</option>
+                  <option value="ios">iOS</option>
                   <option value="htmlcss">HTML / CSS</option>
                 </select>
             </div>
               <div class="form-group row">
-                Comment (optional):
-                <input class="form-control" type="textarea" name="comments" value="">
+                <h5>Comment (optional):</h5>
+                <input class="form-control" type="textarea" name="comment" value="{{ session['comment'] }}">
               </div>
               <div class="form-group row">
-                <button type="button" class="btn btn-warning"  name="submit">Submit</button>
+                <button type="submit" class="btn btn-warning"  name="submit">Submit</button>
               </div>
             </div>
           </form>
         </div>
       </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
   </body>
 </html>

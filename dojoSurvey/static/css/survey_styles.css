@@ -14,16 +14,21 @@
   justify-content: center;
   background-color: lightgrey;
   margin-bottom: 30px;
+  padding-top: 15px;
 }
 
 
 .row {
-  width: 100%;
-  max-width: 750px;
   display: flex;
   justify-content: center;
   padding: 10px;
   background-color: dodgerblue;
+}
+
+.content {
+  width: 500px;
+  background-color: lightblue;
+  padding: 25px;
 }
 
 input, textarea {
